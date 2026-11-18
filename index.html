@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3b1821">
+  <title>Ashokan &amp; Sankari | Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --wine: #234452;
+      --wine-soft: #396272;
+      --rose: #62877d;
+      --gold: #b18a57;
+      --gold-light: #e7d2ae;
+      --ivory: #f5f3ec;
+      --paper: #fcfcf8;
+      --ink: #24353a;
+      --muted: #677579;
+      --line: rgba(177,138,87,.44);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: #dfe8e3; font-family: "Manrope", Arial, sans-serif; }
+    body::before { content: ""; position: fixed; inset: 0; z-index: -1; opacity: .4; background-image: radial-gradient(circle at 20% 15%, #f9faf3 0 1px, transparent 1.5px), radial-gradient(circle at 70% 65%, #f9faf3 0 1px, transparent 1.5px); background-size: 23px 23px, 31px 31px; }
+    .site { width: min(100%, 950px); margin: 0 auto; overflow: hidden; background: var(--ivory); box-shadow: 0 18px 70px rgba(28, 63, 65, .18); }
+    .nav { position: absolute; z-index: 5; top: 0; left: 50%; width: min(100%, 950px); transform: translateX(-50%); display: flex; align-items: center; justify-content: space-between; padding: 26px 42px; color: #fffaf4; }
+    .brand { color: inherit; font-family: "Cormorant Garamond", Georgia, serif; font-size: 13px; letter-spacing: 2px; text-decoration: none; white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { color: inherit; font-size: 10px; font-weight: 600; letter-spacing: 1.4px; text-decoration: none; text-transform: uppercase; transition: color .2s ease; }
+    .nav-links a:hover { color: var(--gold-light); }
+
+    .hero { position: relative; min-height: 790px; display: grid; place-items: center; overflow: hidden; padding: 125px 30px 80px; color: #fff9f1; text-align: center; background: linear-gradient(145deg, rgba(19,54,61,.9), rgba(54,100,95,.79)), url("https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1800&q=90") center/cover; }
+    .hero::after { content: ""; position: absolute; inset: 16px; border: 1px solid rgba(233,210,168,.45); pointer-events: none; }
+    .hero-orb { position: absolute; width: 560px; aspect-ratio: 1; border: 1px solid rgba(233,210,168,.3); border-radius: 50%; opacity: .8; }
+    .hero-orb::before, .hero-orb::after { content: ""; position: absolute; border: 1px solid rgba(233,210,168,.2); border-radius: 50%; }
+    .hero-orb::before { inset: 38px; } .hero-orb::after { inset: 82px; }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .eyebrow { margin: 0 0 20px; color: var(--gold-light); font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; }
+    .hero h1 { margin: 0; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(53px, 9.5vw, 94px); font-weight: 400; letter-spacing: -.04em; line-height: .95; }
+    .hero h1 span { display: block; margin: 13px 0 11px; color: var(--gold-light); font-family: "Pinyon Script", cursive; font-size: .55em; font-weight: 400; letter-spacing: 0; }
+    .hero-note { max-width: 490px; margin: 27px auto 0; color: rgba(255,249,241,.88); font-family: "Cormorant Garamond", Georgia, serif; font-size: 20px; font-style: italic; line-height: 1.5; }
+    .date { display: inline-flex; flex-direction: column; gap: 5px; margin-top: 35px; padding: 16px 29px; border-top: 1px solid var(--gold-light); border-bottom: 1px solid var(--gold-light); }
+    .date strong { font-family: "Cormorant Garamond", Georgia, serif; font-size: 17px; font-weight: 500; letter-spacing: 1.2px; }
+    .date small { color: var(--gold-light); font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 9px; margin-top: 39px; color: #fffaf4; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-decoration: none; text-transform: uppercase; }
+    .hero-cta::after { content: "↓"; color: var(--gold-light); font-size: 19px; line-height: 0; }
+
+    section { padding: 95px 48px; }
+    .heading { margin: 0; color: var(--wine); font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(39px, 5vw, 55px); font-weight: 400; line-height: 1; text-align: center; }
+    .kicker { margin: 0 0 12px; color: var(--rose); font-size: 10px; font-weight: 600; letter-spacing: 3.2px; text-align: center; text-transform: uppercase; }
+    .divider { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 22px auto 35px; color: var(--gold); }
+    .divider::before, .divider::after { content: ""; width: 55px; height: 1px; background: var(--line); }
+    .divider span { font-size: 16px; }
+
+    .story { background: var(--paper); text-align: center; }
+    .story-copy { max-width: 600px; margin: 0 auto; color: var(--muted); font-family: "Cormorant Garamond", Georgia, serif; font-size: 20px; font-style: italic; line-height: 1.65; }
+    .couple { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 25px; max-width: 650px; margin: 47px auto 0; }
+    .person { padding: 25px 10px; }
+    .person-label { display: block; margin-bottom: 9px; color: var(--gold); font-size: 9px; font-weight: 600; letter-spacing: 2.2px; text-transform: uppercase; }
+    .person-name { display: block; color: var(--wine); font-family: "Pinyon Script", cursive; font-size: 54px; line-height: .9; }
+    .heart { display: grid; width: 45px; aspect-ratio: 1; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--rose); font-size: 19px; }
+
+    .events { position: relative; overflow: hidden; background: linear-gradient(140deg, #f6ede2, #fffaf4); }
+    .events::before { content: ""; position: absolute; top: -245px; left: -200px; width: 500px; height: 500px; border: 1px solid rgba(187,146,84,.18); border-radius: 50%; box-shadow: 0 0 0 35px rgba(187,146,84,.05), 0 0 0 70px rgba(187,146,84,.035); }
+    .events-inner { position: relative; max-width: 735px; margin: auto; }
+    .event-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .event { padding: 32px 24px 30px; background: rgba(255,253,249,.75); border: 1px solid var(--line); text-align: center; }
+    .event-icon { display: grid; width: 39px; aspect-ratio: 1; place-items: center; margin: 0 auto 16px; border: 1px solid var(--line); border-radius: 50%; color: var(--gold); font-size: 16px; }
+    .event h3 { margin: 0; color: var(--wine); font-family: "Cormorant Garamond", Georgia, serif; font-size: 33px; font-weight: 500; }
+    .event-time { margin: 13px 0 18px; color: var(--rose); font-size: 11px; font-weight: 600; letter-spacing: 1.25px; }
+    .event p { margin: 0; color: var(--muted); font-family: "Cormorant Garamond", Georgia, serif; font-size: 18px; line-height: 1.45; }
+
+    .venue { background: var(--wine); color: #fffaf4; text-align: center; }
+    .venue .kicker { color: var(--gold-light); }
+    .venue .heading { color: #fffaf4; }
+    .venue .divider::before, .venue .divider::after { background: rgba(233,210,168,.45); }
+    .venue-card { max-width: 665px; margin: auto; padding: 38px 28px; border: 1px solid rgba(233,210,168,.47); }
+    .venue-card h3 { margin: 0; color: var(--gold-light); font-family: "Cormorant Garamond", Georgia, serif; font-size: 34px; font-weight: 400; }
+    .venue-card p { margin: 13px auto 0; color: rgba(255,250,244,.83); font-family: "Cormorant Garamond", Georgia, serif; font-size: 19px; line-height: 1.5; }
+    .direction { display: inline-block; margin-top: 25px; padding: 13px 20px; border: 1px solid var(--gold-light); color: #fffaf4; font-size: 10px; font-weight: 600; letter-spacing: 1.8px; text-decoration: none; text-transform: uppercase; transition: .2s ease; }
+    .direction:hover { color: var(--wine); background: var(--gold-light); }
+
+    .map-frame { width: min(100%, 500px); height: 245px; display: block; margin: 27px auto 0; border: 0; filter: saturate(.72) contrast(.94); }
+    .countdown { background: var(--paper); text-align: center; }
+    .countdown-sub { margin: -12px 0 31px; color: var(--muted); font-family: "Cormorant Garamond", Georgia, serif; font-size: 20px; font-style: italic; }
+    .timer { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 635px; margin: auto; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .time-unit { padding: 24px 8px; border-left: 1px solid var(--line); } .time-unit:first-child { border-left: 0; }
+    .time-unit b { display: block; color: var(--wine); font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(32px, 5vw, 48px); font-weight: 400; line-height: 1; }
+    .time-unit span { display: block; margin-top: 8px; color: var(--rose); font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
+
+    .wishes { background: linear-gradient(160deg, #f5eade, #fdf9f2); }
+    .wish-form { max-width: 650px; margin: auto; padding: 32px; background: rgba(255,253,249,.86); border: 1px solid var(--line); box-shadow: 0 10px 28px rgba(57,24,33,.08); }
+    .field { margin-bottom: 21px; }
+    .field label, .team-label { display: block; margin-bottom: 8px; color: var(--wine); font-size: 10px; font-weight: 600; letter-spacing: 1.35px; text-transform: uppercase; }
+    input, textarea { width: 100%; border: 1px solid var(--line); outline: none; padding: 13px 14px; color: var(--ink); background: #fffefc; font: 17px "Manrope", sans-serif; transition: border .2s, box-shadow .2s; }
+    input:focus, textarea:focus { border-color: var(--rose); box-shadow: 0 0 0 3px rgba(168,95,106,.12); }
+    textarea { min-height: 125px; resize: vertical; font-family: "Cormorant Garamond", Georgia, serif; font-size: 18px; }
+    .team-options { display: grid; grid-template-columns: repeat(2,1fr); gap: 11px; }
+    .team-options label { margin: 0; cursor: pointer; } .team-options input { position: absolute; opacity: 0; }
+    .team-options span { display: block; padding: 13px 7px; border: 1px solid var(--line); color: var(--wine); background: #fffefc; font-size: 11px; font-weight: 600; letter-spacing: .55px; text-align: center; transition: .2s; }
+    .team-options input:checked + span { border-color: var(--wine); color: #fffaf4; background: var(--wine); }
+    .wish-bottom { display: flex; justify-content: space-between; gap: 15px; margin-top: 7px; color: var(--muted); font-size: 10px; }
+    .post { width: 100%; margin-top: 24px; padding: 15px; border: 0; color: #fffaf4; background: var(--wine); cursor: pointer; font: 600 10px "Manrope", sans-serif; letter-spacing: 2px; text-transform: uppercase; transition: .2s; }
+    .post:hover { background: var(--wine-soft); transform: translateY(-1px); }
+    .wish-list { display: grid; gap: 13px; max-width: 650px; margin: 22px auto 0; }
+    .wish { padding: 20px 22px; border-left: 3px solid var(--gold); background: rgba(255,253,249,.84); box-shadow: 0 5px 18px rgba(57,24,33,.06); }
+    .wish p { margin: 0; color: var(--ink); font-family: "Cormorant Garamond", Georgia, serif; font-size: 18px; font-style: italic; line-height: 1.48; }
+    .wish small { display: block; margin-top: 11px; color: var(--rose); font-size: 10px; font-weight: 600; letter-spacing: .7px; }
+
+    footer { padding: 75px 28px; color: #fffaf4; text-align: center; background: #17343d; }
+    footer .monogram { color: var(--gold-light); font-family: "Pinyon Script", cursive; font-size: 63px; line-height: .8; }
+    footer p { margin: 16px auto 0; max-width: 420px; color: rgba(255,250,244,.73); font-family: "Cormorant Garamond", Georgia, serif; font-size: 19px; font-style: italic; line-height: 1.5; }
+    footer small { display: block; margin-top: 30px; color: var(--gold-light); font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+
+    @media (max-width: 700px) {
+      .nav { padding: 20px 18px; } .brand { font-size: 10px; letter-spacing: 1.3px; } .nav-links { gap: 12px; } .nav-links a { font-size: 8px; letter-spacing: .7px; }
+      .hero { min-height: 730px; } section { padding: 72px 19px; } .event-grid { grid-template-columns: 1fr; } .couple { gap: 10px; } .person-name { font-size: 45px; } .wish-form { padding: 22px 16px; }
+    }
+    @media (max-width: 400px) { .nav-links { gap: 8px; } .nav-links a { font-size: 7px; } .brand { font-size: 9px; } .hero h1 { font-size: 51px; } .time-unit { padding-inline: 3px; } }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#home">A &amp; S</a>
+      <div class="nav-links"><a href="#home">Home</a><a href="#events">Events</a><a href="#wishes">Wishes</a></div>
+    </nav>
+
+    <header class="hero" id="home">
+      <div class="hero-orb" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Together with their families</p>
+        <h1>Ashokan <span>&amp;</span> Sankari</h1>
+        <p class="hero-note">Request the honour of your presence as they begin their beautiful journey together.</p>
+        <div class="date"><strong>Friday, 4th December 2026</strong><small>Muhurtham · 8:15 AM – 9:15 AM</small></div><br>
+        <a class="hero-cta" href="#events">Celebrate with us</a>
+      </div>
+    </header>
+
+    <section class="story">
+      <p class="kicker">A celebration of love</p>
+      <h2 class="heading">Two hearts, one beautiful beginning</h2>
+      <div class="divider"><span>✦</span></div>
+      <p class="story-copy">With hearts full of joy, we invite you to share in the warmth, laughter, and blessings of our wedding celebration.</p>
+      <div class="couple">
+        <div class="person"><span class="person-label">Groom</span><span class="person-name">Ashokan</span></div>
+        <div class="heart">♥</div>
+        <div class="person"><span class="person-label">Bride</span><span class="person-name">Sankari</span></div>
+      </div>
+    </section>
+
+    <section class="events" id="events">
+      <div class="events-inner">
+        <p class="kicker">Wedding celebrations</p>
+        <h2 class="heading">Event Details</h2>
+        <div class="divider"><span>✦</span></div>
+        <div class="event-grid">
+          <article class="event"><div class="event-icon">✦</div><h3>Muhurtham</h3><p class="event-time">8:15 AM – 9:15 AM</p><p>Join us for the sacred wedding ceremony and bless our new beginning.</p></article>
+          <article class="event"><div class="event-icon">✦</div><h3>Reception</h3><p class="event-time">10:00 AM – 12:30 PM</p><p>Celebrate with family and friends as we begin our new chapter together.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="venue">
+      <p class="kicker">Venue details</p>
+      <h2 class="heading">Celebrate With Us</h2>
+      <div class="divider"><span>✦</span></div>
+      <div class="venue-card">
+        <h3>Manivel Murugan Temple</h3>
+        <p>JJ Engineering College<br>Ammapettai</p>
+        <iframe class="map-frame" title="Manivel Murugan Temple location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.258138356181!2d79.47836460000002!3d11.927862300000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a535702ce4fe811%3A0xca07d5575a4256f0!2sBalamurugan%20Magal!5e1!3m2!1sen!2sin!4v1768632461653!5m2!1sen!2sin" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="direction" href="https://maps.app.goo.gl/UGruT8iBFgafDFCK8" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+    </section>
+
+    <section class="countdown">
+      <p class="kicker">Save the date</p>
+      <h2 class="heading">The celebration awaits</h2>
+      <div class="divider"><span>✦</span></div>
+      <p class="countdown-sub">Counting down to our special day</p>
+      <div class="timer" aria-label="Countdown to the wedding"><div class="time-unit"><b id="days">0</b><span>Days</span></div><div class="time-unit"><b id="hours">00</b><span>Hours</span></div><div class="time-unit"><b id="minutes">00</b><span>Minutes</span></div><div class="time-unit"><b id="seconds">00</b><span>Seconds</span></div></div>
+    </section>
+
+    <section class="wishes" id="wishes">
+      <p class="kicker">Memory Wall</p>
+      <h2 class="heading">Share your love &amp; blessings</h2>
+      <div class="divider"><span>✦</span></div>
+      <form id="wish-form" class="wish-form">
+        <div class="field"><label for="name">Your name</label><input id="name" maxlength="60" placeholder="Enter your name" required></div>
+        <div class="field"><span class="team-label">Are you Team Bride or Groom?</span><div class="team-options"><label><input type="radio" name="team" value="Sankari (Bride)" required><span>Sankari (Bride)</span></label><label><input type="radio" name="team" value="Ashokan (Groom)"><span>Ashokan (Groom)</span></label></div></div>
+        <div class="field"><label for="message">Your wish</label><textarea id="message" maxlength="300" placeholder="Share a favourite memory or a wish..." required></textarea><div class="wish-bottom"><span>Your message will be shared with the couple.</span><span><b id="remaining">300</b> remaining</span></div></div>
+        <button class="post" type="submit">Post Your Wish</button>
+      </form>
+      <div id="wish-list" class="wish-list" aria-live="polite"></div>
+    </section>
+
+    <footer><div class="monogram">A &amp; S</div><p>We look forward to celebrating this beautiful occasion with you.</p><small>With love · Ashokan &amp; Sankari</small></footer>
+  </main>
+  <script>
+    (() => {
+      const target = new Date('2026-12-04T08:15:00+05:30').getTime();
+      const show = (id, value) => document.getElementById(id).textContent = value;
+      function tick() { const seconds = Math.max(0, Math.floor((target - Date.now()) / 1000)); show('days', Math.floor(seconds / 86400)); show('hours', String(Math.floor(seconds % 86400 / 3600)).padStart(2, '0')); show('minutes', String(Math.floor(seconds % 3600 / 60)).padStart(2, '0')); show('seconds', String(seconds % 60).padStart(2, '0')); }
+      tick(); setInterval(tick, 1000);
+
+      const form = document.getElementById('wish-form'); const message = document.getElementById('message'); const remaining = document.getElementById('remaining'); const list = document.getElementById('wish-list'); const storageKey = 'ashokan-sankari-wedding-wishes';
+      function draw(entry, first = false) { const card = document.createElement('article'); card.className = 'wish'; const text = document.createElement('p'); text.textContent = '“' + entry.message + '”'; const by = document.createElement('small'); by.textContent = '— ' + entry.name + ' · Team ' + entry.team; card.append(text, by); first ? list.prepend(card) : list.append(card); }
+      const saved = JSON.parse(localStorage.getItem(storageKey) || '[]'); saved.slice().reverse().forEach(entry => draw(entry));
+      message.addEventListener('input', () => remaining.textContent = 300 - message.value.length);
+      form.addEventListener('submit', (event) => { event.preventDefault(); const name = document.getElementById('name').value.trim(); const team = new FormData(form).get('team'); const wish = message.value.trim(); if (!name || !team || !wish) return; const entry = { name, team, message: wish }; draw(entry, true); saved.push(entry); localStorage.setItem(storageKey, JSON.stringify(saved)); form.reset(); remaining.textContent = 300; });
+    })();
+  </script>
+</body>
+</html>
