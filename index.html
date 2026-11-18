@@ -48,8 +48,22 @@
     .date { display: inline-flex; flex-direction: column; gap: 5px; margin-top: 35px; padding: 16px 29px; border-top: 1px solid var(--gold-light); border-bottom: 1px solid var(--gold-light); }
     .date strong { font-family: "Cormorant Garamond", Georgia, serif; font-size: 17px; font-weight: 500; letter-spacing: 1.2px; }
     .date small { color: var(--gold-light); font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+    .date-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 18px 22px; margin-top: 35px; }
+    .date-row .date { margin-top: 0; }
+    .save-date { display: inline-block; padding: 15px 24px; border: 1px solid var(--gold-light); color: var(--wine); background: var(--gold-light); font-size: 10px; font-weight: 600; letter-spacing: 1.8px; text-decoration: none; text-transform: uppercase; transition: .2s ease; }
+    .save-date:hover { color: #fffaf4; background: transparent; }
     .hero-cta { display: inline-flex; align-items: center; gap: 9px; margin-top: 39px; color: #fffaf4; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-decoration: none; text-transform: uppercase; }
     .hero-cta::after { content: "↓"; color: var(--gold-light); font-size: 19px; line-height: 0; }
+
+    /* Couple illustration */
+    .hero { gap: 30px; grid-template-columns: minmax(0, 1fr); }
+    .hero-art { position: relative; z-index: 1; width: min(66vw, 260px); margin: 0; order: -1; }
+    .hero-art img { display: block; width: 100%; height: auto; filter: drop-shadow(0 18px 28px rgba(8, 28, 33, .45)); }
+    @media (min-width: 820px) {
+      .hero { grid-template-columns: minmax(0, 1fr) 330px; gap: 36px; padding-inline: 48px; }
+      .hero-art { width: 330px; order: 0; }
+      .hero-orb { right: -85px; top: 50%; transform: translateY(-50%); }
+    }
 
     section { padding: 95px 48px; }
     .heading { margin: 0; color: var(--wine); font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(39px, 5vw, 55px); font-weight: 400; line-height: 1; text-align: center; }
@@ -140,9 +154,15 @@
         <p class="eyebrow">Together with their families</p>
         <h1>Ashokan <span>&amp;</span> Sankari</h1>
         <p class="hero-note">Request the honour of your presence as they begin their beautiful journey together.</p>
-        <div class="date"><strong>Friday, 4th December 2026</strong><small>Muhurtham · 7:25 AM – 9:25 AM</small></div><br>
+        <div class="date-row">
+          <div class="date"><strong>Friday, 4th December 2026</strong><small>Muhurtham · 8:15 AM – 9:15 AM</small></div>
+          <a class="save-date" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=The+Wedding+of+Ashokan+and+Sankari&amp;details=The+Wedding+of+Ashokan+and+Sankari%0A%0ADate:+04+December+2026%0ALocation:+Manivel+Murugan+Temple,+Near+JJ+Engineering+college,+Ammapettai,+Trichy,+Tamil+Nadu%0ATime:+07:25+AM+-+09:24+AM+IST&amp;dates=20261204T072500/20261204T092400&amp;location=https://maps.app.goo.gl/UGruT8iBFgafDFCK8" target="_blank" rel="noopener">Save the Date</a>
+        </div>
         <a class="hero-cta" href="#events">Celebrate with us</a>
       </div>
+      <figure class="hero-art">
+        <img src="AshokanSankari.png" width="800" height="1200" alt="Illustration of Ashokan and Sankari under a flower arch">
+      </figure>
     </header>
 
     <section class="story">
@@ -163,7 +183,7 @@
         <h2 class="heading">Event Details</h2>
         <div class="divider"><span>✦</span></div>
         <div class="event-grid">
-          <article class="event"><div class="event-icon">✦</div><h3>Muhurtham</h3><p class="event-time">7:25 AM – 9:25 AM</p><p>Join us for the sacred wedding ceremony and bless our new beginning.</p></article>
+          <article class="event"><div class="event-icon">✦</div><h3>Muhurtham</h3><p class="event-time">8:15 AM – 9:15 AM</p><p>Join us for the sacred wedding ceremony and bless our new beginning.</p></article>
           <article class="event"><div class="event-icon">✦</div><h3>Reception</h3><p class="event-time">10:00 AM – 12:30 PM</p><p>Celebrate with family and friends as we begin our new chapter together.</p></article>
         </div>
       </div>
@@ -206,7 +226,7 @@
   </main>
   <script>
     (() => {
-      const target = new Date('2026-12-04T09:25:00+05:30').getTime();
+      const target = new Date('2026-12-04T08:15:00+05:30').getTime();
       const show = (id, value) => document.getElementById(id).textContent = value;
       function tick() { const seconds = Math.max(0, Math.floor((target - Date.now()) / 1000)); show('days', Math.floor(seconds / 86400)); show('hours', String(Math.floor(seconds % 86400 / 3600)).padStart(2, '0')); show('minutes', String(Math.floor(seconds % 3600 / 60)).padStart(2, '0')); show('seconds', String(seconds % 60).padStart(2, '0')); }
       tick(); setInterval(tick, 1000);
